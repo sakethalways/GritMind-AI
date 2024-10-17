@@ -41,7 +41,6 @@
         .chat-header {
             padding: 10px;
             border-bottom: 1px solid #ddd;
-            background-color: #3b5998;
             color: white;
             text-align: center;
         }
@@ -50,8 +49,8 @@
 <body>
 
 <div class="chat-container">
-    <div class="chat-header">
-        <h4>GritMind AI Chat</h4>
+    <div class="chat-header bg-warning">
+        <h4 style="color: black;">GritMind AI Chat</h4>
     </div>
     <div class="chat-box" id="chat-box"></div>
 
@@ -60,7 +59,7 @@
         <button class="btn btn-primary" id="send-btn">Send</button>
     </div>
 </div>
-
+<p style="text-align: center;">Created by: {{ short_name }} ({{ creator_name }})</p>  <!-- Display both names -->
 <script>
     document.getElementById('send-btn').addEventListener('click', function() {
         const userInput = document.getElementById('user-input').value;
